@@ -1,0 +1,245 @@
+* {box-sizing: border-box;}
+            body{
+                background-image: url(http://habrastorage.org/files/996/d76/d04/996d76d0410d422fa54cc433ce7ead2a.png);
+            }
+            
+            td {
+                border: solid 1px black;
+                width: 40%;
+            }
+            
+            #header{
+                background-color: #ddd;
+                height: 50px;
+                margin: 50px auto 0;
+                width: 1200px;
+                position: relative;
+                -webkit-box-shadow: 0 0 20px rgba(0, 0, 0, .5);
+                -moz-box-shadow: 0 0 20px rgba(0, 0, 0, .5);
+                -o-box-shadow: 0 0 20px rgba(0, 0, 0, .5);
+                box-shadow: 0 0 20px rgba(0, 0, 0, .5);
+                text-align: center;
+                font-family: 'Exo 2', sans-serif;
+            }
+            
+            #footer{
+                background-color: #ddd;
+                height: 100px;
+                margin: 50px auto 0;
+                width: 1200px;
+                position: relative;
+                -webkit-box-shadow: 0 0 20px rgba(0, 0, 0, .5);
+                -moz-box-shadow: 0 0 20px rgba(0, 0, 0, .5);
+                -o-box-shadow: 0 0 20px rgba(0, 0, 0, .5);
+                box-shadow: 0 0 20px rgba(0, 0, 0, .5);
+                text-align: left;
+                font-family: 'Exo 2', sans-serif;
+            }
+            
+            #content {
+                background-color: #ddd;
+                
+                margin: 50px auto 0;
+                width: 1200px;
+                position: relative;
+                -webkit-box-shadow: 0 0 20px rgba(0, 0, 0, .5);
+                -moz-box-shadow: 0 0 20px rgba(0, 0, 0, .5);
+                -o-box-shadow: 0 0 20px rgba(0, 0, 0, .5);
+                box-shadow: 0 0 20px rgba(0, 0, 0, .5);
+                text-align: center;
+                font-family: 'Exo 2', sans-serif;
+            }
+            
+            p{
+                text-align: right;
+                margin-bottom: -30px;
+                
+                margin-left: 330px;
+                width: 800px;
+                font-family: 'Exo 2', sans-serif;
+            }
+            
+            .ttext {
+                font-weight: bold;
+            }
+            
+            .text {
+                font-size: 120%;
+                text-align: left;
+                font-family: 'Exo 2', sans-serif;
+            }
+            
+            #news h5 {
+                font-size: 150%;
+                text-align: center;
+                margin-bottom: -5px;
+                margin-top: -0px;
+                font-family: 'Exo 2', sans-serif;
+            }
+            
+            #news img{
+                margin-left: 10px;
+                margin-bottom: 30px;
+                margin-top: 45px;
+            }
+            
+            .wrapper{
+                height: 400px;
+                margin: 100px auto 0;
+                position: relative;
+                width: 1200px;
+            }
+            .slider {
+                background-color: #ddd;
+                height: inherit;
+                overflow: hidden;
+                position: relative;
+                width: inherit;
+                -webkit-box-shadow: 0 0 20px rgba(0, 0, 0, .5);
+                -moz-box-shadow: 0 0 20px rgba(0, 0, 0, .5);
+                -o-box-shadow: 0 0 20px rgba(0, 0, 0, .5);
+                box-shadow: 0 0 20px rgba(0, 0, 0, .5);
+            }
+            .wrapper > input {
+                display: none;
+            }
+            .slides{
+                height: inherit;
+                position: absolute;
+                width: inherit;
+                z-index: 0;
+                -webkit-transform: scale(1.5);
+                -moz-transform: scale(1.5);
+                -o-transform: scale(1.5);
+                transform: scale(1.5);
+                -webkit-transition: transform ease-in-out .5s, opacity ease-in-out .5s;
+                -moz-transition: transform ease-in-out .5s, opacity ease-in-out .5s;
+                -o-transition: transform ease-in-out .5s, opacity ease-in-out .5s;
+                transition: transform ease-in-out .5s, opacity ease-in-out .5s;
+            }
+            
+            .slide1{
+                background: #ddd;
+            }
+            .slide2{
+                background: #ddd;
+            }
+            .slide3{
+                background: #ddd;
+            }
+            
+            #slide1:checked ~ .slider > .slide1,
+            #slide2:checked ~ .slider > .slide2,
+            #slide3:checked ~ .slider > .slide3{
+                opacity: 1;
+                z-index: 1;
+                -webkit-transform: scale(1);
+                -moz-transform: scale(1);
+                -o-transform: scale(1);
+                transform: scale(1);
+            }
+            
+            .wrapper .controls{
+                left: 50%;
+                margin-left: -98px;
+                position: absolute;
+            }
+            .wrapper label{
+                cursor: pointer;
+                display: inline-block;
+                height: 8px;
+                margin: 25px 12px 0 16px;
+                position: relative;
+                width: 8px;
+                -webkit-border-radius: 50%;
+                -moz-border-radius: 50%;
+                -o-border-radius: 50%;
+                border-radius: 50%;
+                -webkit-transition: background ease-in-out .5s;
+                -moz-transition: background ease-in-out .5s;
+                -o-transition: background ease-in-out .5s;
+                transition: background ease-in-out .5s;
+            }
+            .wrapper label:hover, 
+            #slide1:checked~.controls label:nth-of-type(1),
+            #slide2:checked~.controls label:nth-of-type(2),
+            #slide3:checked~.controls label:nth-of-type(3){
+                background: #ddd;
+            }
+            
+            .wrapper label:after{
+                border: 2px solid #ddd;
+                content: " ";
+                display: block;
+                height: 12px;
+                left: -4px;
+                position: absolute;
+                top: -4px;
+                width: 12px;
+                -webkit-border-radius: 50%;
+                -moz-border-radius: 50%;
+                -o-border-radius: 50%;
+                border-radius: 50%;
+            }
+            nav ul {
+                list-style: none;
+                margin: 0;
+                padding: 0;
+            }
+            nav a {
+                display: block;
+                text-decoration: none;
+                outline: none;
+                transition: .4s ease-in-out;
+            }
+            .topmenu {
+                backface-visibility: hidden;
+                background-color: #ddd;
+                width: 1200px;
+                margin: 50px auto 0;
+            }
+            .topmenu > li {
+                display: inline-block;
+                position: relative;
+            }
+            .topmenu > li > a {
+                font-family: 'Exo 2', sans-serif;
+                height: 70px;
+                line-height: 70px;
+                padding: 0 30px;
+                font-weight: bold;
+                color: #003559;
+                text-transform: uppercase;
+            }
+            .down:after {
+                content: "\f107";
+                font-family: FontAwesome;
+                margin-left: 8px;
+                
+            }
+            .topmenu li a:hover { color: #E6855F; }
+            .submenu {
+                background: white;
+                border: 2px solid #003559;
+                position: absolute;
+                left: 0;
+                visibility: hidden;
+                opacity: 0;
+                z-index: 5;
+                width: 150px;
+                transform: perspective(600px) rotateX(-90deg);
+                transform-origin: 0% 0%;
+                transition: .6s ease-in-out;
+            }
+            .topmenu > li:hover .submenu{
+                visibility: visible;
+                opacity: 1;
+                transform: perspective(600px) rotateX(0deg);
+            }
+            .submenu li a {
+                color: #7f7f7f;
+                font-size: 13px;
+                line-height: 36px;
+                padding: 0 25px;
+                font-family: 'Kurale', serif;
+            }
